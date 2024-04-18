@@ -2,20 +2,19 @@ import { useState, useEffect } from 'react';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from '../assets/img/header-img.svg';
+import headerImg from '../assets/img/123.png';
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['Front-End Developer', 'FullStack Developer'];
+  const toRotate = ['Web Developer', 'FullStack Developer'];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
+  const period = 300;
 
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
-
     return () => {
       clearInterval(ticker);
     };
@@ -40,7 +39,7 @@ export const Banner = () => {
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(300);
     }
   };
 
@@ -51,9 +50,9 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <span className='tagline'>Welcome to my Portfolio</span>
             <h1>
-              {'hi I`m Herbert '}
-              <span className='wrap'>{text}</span>
+              {'Hello I`m Herbert : '} <span className='wrap'>{text}</span>
             </h1>
+
             <p>hey guys!</p>
             <button onClick={() => console.log('connect')}>
               Let's Connect!
