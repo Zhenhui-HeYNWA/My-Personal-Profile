@@ -2,11 +2,15 @@ import { useState, useEffect } from 'react';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from '../assets/img/123.png';
+import headerImg from '../assets/img/logo123.png';
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['Web Developer', 'FullStack Developer'];
+  const toRotate = [
+    'Web Developer',
+    'FullStack Developer',
+    'FrontEnd Developer',
+  ];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 300;
@@ -47,7 +51,7 @@ export const Banner = () => {
     <section className='banner' id='home'>
       <Container>
         <Row className='align-items-center'>
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={7} className='infoboard'>
             <span className='tagline'>Welcome to my Portfolio</span>
             <h1>
               {'Hello I`m Herbert : '} <span className='wrap'>{text}</span>
